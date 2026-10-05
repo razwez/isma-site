@@ -54,7 +54,9 @@ img { max-width: 100%; height: auto; display: block; }
   text-decoration: none; box-shadow: 0 4px 0 var(--accent-edge);
 }
 .button:hover { color: var(--ink); transform: translateY(1px); box-shadow: 0 3px 0 var(--accent-edge); }
-.soon { display: block; margin-top: 12px; font-size: 14px; color: var(--muted); }
+.soon { display: block; margin-top: 10px; font-size: 14px; color: var(--muted); }
+.stores { display: flex; gap: 12px; }
+.store { display: inline-flex; align-items: center; height: 52px; padding: 0 22px; border-radius: 14px; background: var(--ink); color: var(--bg); font-weight: 700; font-size: 17px; }
 
 /* sections */
 section { padding: 56px 0; }
@@ -72,6 +74,7 @@ h2 { font-size: clamp(28px, 4vw, 38px); letter-spacing: -0.02em; line-height: 1.
 .learning { color: var(--learning); }
 .known { color: var(--known); }
 .sample .en { color: var(--muted); margin: 0; }
+.caption { color: var(--muted); margin: 14px 0 0; }
 
 .dialects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .dialect { border: 2px solid var(--line); border-radius: var(--radius); padding: 20px 22px; background: var(--surface); }
@@ -112,6 +115,7 @@ th { font-weight: 800; }
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; padding-top: 16px; text-align: center; }
   .hero p { margin-left: auto; margin-right: auto; }
+  .stores { justify-content: center; }
   .art { grid-row: 1; width: min(220px, 56vw); }
   .cards, .dialects, .plans { grid-template-columns: 1fr; }
   .top nav { gap: 14px; }
