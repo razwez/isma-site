@@ -79,7 +79,6 @@ h2 { font-size: clamp(28px, 4vw, 38px); letter-spacing: -0.02em; line-height: 1.
 .w .ar { font-size: 30px; line-height: 1.7; }
 .w .spoken { padding: 0 6px; }
 .w i { font-size: 15px; color: var(--muted); direction: ltr; }
-.w small { font-size: 14px; color: var(--ink); direction: ltr; }
 .caption { color: var(--muted); margin: 14px 0 0; }
 
 .dialects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
