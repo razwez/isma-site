@@ -33,7 +33,7 @@ img { max-width: 100%; height: auto; display: block; }
 .top { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 20px; }
 .logo img { width: 36px; height: 36px; border-radius: 9px; }
-.logo img.wordmark { width: auto; height: 40px; border-radius: 0; }
+.logo img.wordmark { width: auto; height: 64px; border-radius: 0; }
 .logo .ar { font-size: 24px; font-weight: 700; line-height: 1; }
 .top nav { display: flex; gap: 20px; font-weight: 600; font-size: 15px; }
 .top nav a { text-decoration: none; color: var(--muted); }
@@ -44,8 +44,8 @@ img { max-width: 100%; height: auto; display: block; }
 .hero h1 { font-size: clamp(38px, 6vw, 60px); line-height: 1.05; letter-spacing: -0.03em; font-weight: 800; margin: 0; }
 .hero h1 .ar { display: block; font-size: 0.8em; font-weight: 700; margin-bottom: 6px; }
 .hero p { font-size: 19px; color: var(--muted); max-width: 30em; margin: 20px 0 28px; }
-.art { justify-self: center; width: min(360px, 80vw); aspect-ratio: 1; border-radius: 50%; background: var(--accent); display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
-.art img { width: 74%; margin-bottom: -2%; }
+.art { justify-self: center; width: min(300px, 70vw); display: flex; justify-content: center; }
+.art img { width: 100%; height: auto; }
 
 .button {
   display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 26px;
@@ -111,7 +111,7 @@ th { font-weight: 800; }
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; padding-top: 16px; text-align: center; }
   .hero p { margin-left: auto; margin-right: auto; }
-  .art { grid-row: 1; width: min(280px, 72vw); }
+  .art { grid-row: 1; width: min(220px, 56vw); }
   .cards, .dialects, .plans { grid-template-columns: 1fr; }
   .top nav { gap: 14px; }
 }
