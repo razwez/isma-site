@@ -1,0 +1,92 @@
+/* The homepage's look: on top of style.css, which the legal pages share. */
+.home { overflow-x: hidden; }
+
+/* hero: cream with a soft saffron glow and dots */
+.hero-band { position: relative; background:
+  radial-gradient(600px 420px at 78% 40%, rgba(255,194,51,.35), transparent 70%),
+  radial-gradient(circle, rgba(224,162,26,.22) 1.5px, transparent 1.6px) 0 0 / 22px 22px,
+  var(--bg); border-bottom-left-radius: 48px; border-bottom-right-radius: 48px; }
+.home .hero { padding: 32px 0 64px; }
+.kicker { display: inline-block; background: var(--surface); border: 2px solid var(--line); border-radius: 999px; padding: 4px 14px; font-weight: 700; font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+.home .hero h1 { font-size: clamp(40px, 6.2vw, 68px); }
+.mark { background: linear-gradient(transparent 58%, var(--accent) 58%, var(--accent) 92%, transparent 92%); padding: 0 4px; }
+.home .hero p { color: var(--ink); opacity: .75; }
+.store { transition: transform .15s; }
+.store:hover { transform: translateY(-2px); }
+
+.home .art { position: relative; width: min(340px, 72vw); }
+.home .art img { position: relative; z-index: 1; animation: bob 4s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translateY(-8px); } }
+.sticker { position: absolute; z-index: 2; background: var(--surface); border-radius: 14px; padding: 6px 12px; font-weight: 700; font-size: 14px; box-shadow: 0 6px 18px rgba(30,26,22,.12); white-space: nowrap; }
+.sticker .ar { font-size: 20px; margin-right: 4px; }
+.s1 { top: 6%; left: -14%; transform: rotate(-8deg); background: var(--accent); }
+.s2 { top: 34%; right: -16%; transform: rotate(7deg); color: var(--known); }
+.s3 { top: 62%; left: -18%; transform: rotate(-4deg); color: var(--learning); }
+.bubble { position: relative; z-index: 2; background: var(--ink); color: var(--bg); border-radius: 20px; padding: 10px 22px 12px; margin-top: 4px; }
+.bubble::before { content: ""; position: absolute; top: -9px; left: 50%; margin-left: -9px; border: 9px solid transparent; border-top: 0; border-bottom-color: var(--ink); }
+.home .art .bubble .ar { color: var(--bg); font-size: 26px; margin: 0; line-height: 1.5; }
+.home .art .bubble .en { color: var(--accent); font-size: 15px; font-weight: 700; }
+
+/* the scrolling strip of everyday words */
+.ticker { background: var(--ink); color: var(--bg); overflow: hidden; padding: 14px 0; margin-top: 40px; transform: rotate(-1.5deg); }
+.track { display: flex; gap: 14px; width: max-content; animation: scroll 40s linear infinite; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+.chip { display: inline-flex; align-items: baseline; gap: 8px; padding: 4px 16px; border-radius: 999px; border: 1.5px solid rgba(255,251,243,.2); white-space: nowrap; }
+.chip .ar { font-size: 22px; font-weight: 700; color: var(--accent); }
+.chip i { opacity: .7; font-size: 15px; }
+.chip b { font-weight: 600; font-size: 15px; }
+@media (prefers-reduced-motion: reduce) { .track, .home .art img { animation: none; } }
+
+/* sections */
+.home section { padding: 72px 0; }
+.band.sand { background: var(--sand); }
+.eyebrow { display: inline-block; font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--learning); margin-bottom: 6px; }
+.home h2 { margin-bottom: 28px; }
+
+.why .card { border: 0; transition: transform .2s; }
+.why .card:hover { transform: translateY(-4px) rotate(-.5deg); }
+.icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+.icon svg { width: 26px; height: 26px; }
+.c1 .icon { background: var(--accent); color: var(--ink); }
+.c2 .icon { background: var(--known-tint); color: var(--known); }
+.c3 .icon { background: #fde4d3; color: var(--learning); }
+
+/* tappable subtitle */
+.home .sample { padding: 26px 28px; }
+.words .w { background: none; border: 0; padding: 4px 8px; border-radius: 12px; cursor: pointer; font: inherit; color: inherit; display: flex; flex-direction: column; align-items: center; transition: background .15s; }
+.words .w:hover { background: rgba(30,26,22,.05); }
+.words .w.picked { background: rgba(255,194,51,.45); outline: 2px solid var(--accent-edge); }
+.words .w i { font-size: 15px; color: var(--muted); }
+.gloss { margin-top: 14px; display: inline-block; background: var(--ink); color: var(--bg); border-radius: 12px; padding: 6px 14px; font-weight: 700; }
+.gloss .ar { color: var(--accent); font-size: 20px; margin-right: 6px; }
+
+/* review deck: two cards fanned behind the real one */
+.deck { position: relative; max-width: 340px; margin: 0 auto; }
+.deck::before, .deck::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.deck::before { background: var(--accent); transform: rotate(-6deg) translate(-14px, 8px); }
+.deck::after { background: var(--known-tint); transform: rotate(4deg) translate(12px, 6px); }
+.deck .flash { position: relative; z-index: 1; }
+
+/* dialects */
+.home .dialect { border: 0; min-height: 150px; display: flex; flex-direction: column; justify-content: space-between; transition: transform .2s; }
+.home .dialect:hover { transform: translateY(-4px); }
+.home .dialect .ar { float: none; font-size: 44px; font-weight: 700; line-height: 1.4; color: inherit; text-align: right; }
+.home .dialect h3 { font-size: 20px; }
+.d1 { background: var(--accent); }
+.d2 { background: var(--known); color: var(--bg); }
+.d3 { background: var(--ink); color: var(--bg); }
+
+/* footer */
+footer.dark { background: var(--ink); color: rgba(255,251,243,.7); border: 0; padding: 48px 0 56px; margin-top: 24px; }
+footer.dark .wrap { align-items: center; }
+footer.dark a { color: rgba(255,251,243,.8); }
+footer.dark a:hover { color: var(--accent); }
+.foot-mark { height: 56px; width: auto; }
+.copy { width: 100%; font-size: 13px; }
+
+@media (max-width: 760px) {
+  .hero-band { border-radius: 0 0 32px 32px; }
+  .home .art { width: min(240px, 60vw); margin-bottom: 8px; }
+  .s1 { left: -22%; } .s2 { right: -24%; } .s3 { left: -26%; }
+  .home .dialect { min-height: 110px; }
+}

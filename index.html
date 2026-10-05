@@ -14,41 +14,56 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@500;700&display=swap">
 <link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="home.css?v=1">
 </head>
-<body>
+<body class="home">
+<div class="hero-band">
 <header class="wrap top">
   <a class="logo" href="./"><img class="wordmark" src="assets/isma-wordmark.svg" alt="Isma"></a>
   <nav><a href="#how">How it works</a><a href="#why">Why it works</a></nav>
 </header>
 
-<main>
-  <div class="wrap hero">
-    <div>
-      <h1>Doomscrolling, but you <span class="nowrap">learn Arabic.</span></h1>
-      <p>Real Arabic videos. Tap any word to understand it.</p>
-      <div class="stores"><span class="store">App Store</span><span class="store">Google Play</span></div>
-      <span class="soon">Coming soon</span>
-    </div>
-    <div class="art"><img src="assets/fanak.png" alt="Fanak, Isma’s fennec fox, holding a small cup of coffee"><p class="ar" lang="ar" dir="rtl">مَرْحَبًا، أَنَا فَنَك!</p><p class="en">Hello, I’m Fanak!</p></div>
+<div class="wrap hero">
+  <div>
+    <span class="kicker">Egyptian · Levantine · Fuṣḥā</span>
+    <h1>Doomscrolling, but you <span class="nowrap"><span class="mark">learn Arabic.</span></span></h1>
+    <p>Real Arabic videos. Tap any word to understand it.</p>
+    <div class="stores"><span class="store">App Store</span><span class="store">Google Play</span></div>
+    <span class="soon">Coming soon</span>
   </div>
+  <div class="art">
+    <img src="assets/fanak.png" alt="Fanak, Isma’s fennec fox, holding a small cup of coffee">
+    <span class="sticker s1"><span class="ar" lang="ar">يَلّا!</span> let’s go</span>
+    <span class="sticker s2"><span class="ar" lang="ar">تَمَام</span> all good</span>
+    <span class="sticker s3"><span class="ar" lang="ar">قَمَر</span> gorgeous</span>
+    <div class="bubble"><p class="ar" lang="ar" dir="rtl">مَرْحَبًا، أَنَا فَنَك!</p><p class="en">Hello, I’m Fanak!</p></div>
+  </div>
+</div>
+</div>
 
+<div class="ticker" aria-hidden="true"><div class="track"><span class="chip"><span class="ar" lang="ar">يَلّا</span><i>yalla</i><b>let’s go</b></span><span class="chip"><span class="ar" lang="ar">حَبِيبِي</span><i>ḥabībi</i><b>my dear</b></span><span class="chip"><span class="ar" lang="ar">خَلَاص</span><i>khalāṣ</i><b>that’s it</b></span><span class="chip"><span class="ar" lang="ar">مَاشِي</span><i>māshi</i><b>okay</b></span><span class="chip"><span class="ar" lang="ar">يَعْنِي</span><i>yaʿni</i><b>like, I mean</b></span><span class="chip"><span class="ar" lang="ar">أَوِي</span><i>awi</i><b>really</b></span><span class="chip"><span class="ar" lang="ar">كْتِير</span><i>ktīr</i><b>so much</b></span><span class="chip"><span class="ar" lang="ar">تَمَام</span><i>tamām</i><b>all good</b></span><span class="chip"><span class="ar" lang="ar">يَا سَلَام</span><i>yā salām</i><b>wow</b></span><span class="chip"><span class="ar" lang="ar">بُكْرَة</span><i>bukra</i><b>tomorrow</b></span><span class="chip"><span class="ar" lang="ar">يَلّا</span><i>yalla</i><b>let’s go</b></span><span class="chip"><span class="ar" lang="ar">حَبِيبِي</span><i>ḥabībi</i><b>my dear</b></span><span class="chip"><span class="ar" lang="ar">خَلَاص</span><i>khalāṣ</i><b>that’s it</b></span><span class="chip"><span class="ar" lang="ar">مَاشِي</span><i>māshi</i><b>okay</b></span><span class="chip"><span class="ar" lang="ar">يَعْنِي</span><i>yaʿni</i><b>like, I mean</b></span><span class="chip"><span class="ar" lang="ar">أَوِي</span><i>awi</i><b>really</b></span><span class="chip"><span class="ar" lang="ar">كْتِير</span><i>ktīr</i><b>so much</b></span><span class="chip"><span class="ar" lang="ar">تَمَام</span><i>tamām</i><b>all good</b></span><span class="chip"><span class="ar" lang="ar">يَا سَلَام</span><i>yā salām</i><b>wow</b></span><span class="chip"><span class="ar" lang="ar">بُكْرَة</span><i>bukra</i><b>tomorrow</b></span></div></div>
+
+<main>
   <section id="why">
     <div class="wrap">
+      <span class="eyebrow">The method</span>
       <h2>Why it works</h2>
-      <div class="cards">
-        <div class="card"><h3>Immersion</h3><p>You learnt your first language by hearing it, not studying it. Isma gives you lots of real Arabic in clips short enough to follow, so your ear does the work.</p></div>
-        <div class="card"><h3>Spaced repetition</h3><p>Each word you save comes back just before you’d forget it. Every review pushes the next one further away, so a few minutes a day keeps hundreds of words.</p></div>
-        <div class="card"><h3>Together</h3><p>Words come back in the sentence and voice you first heard them in, so you remember how they’re really used, not just what they mean.</p></div>
+      <div class="cards why">
+        <div class="card c1"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6 6 0 1 1 12 0c0 3.5-3 4.5-3 7a3 3 0 0 1-6 0"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0"/></svg></span><h3>Immersion</h3><p>You learnt your first language by hearing it, not studying it. Isma gives you lots of real Arabic in clips short enough to follow, so your ear does the work.</p></div>
+        <div class="card c2"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></svg></span><h3>Spaced repetition</h3><p>Each word you save comes back just before you’d forget it. Every review pushes the next one further away, so a few minutes a day keeps hundreds of words.</p></div>
+        <div class="card c3"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1"/></svg></span><h3>Together</h3><p>Words come back in the sentence and voice you first heard them in, so you remember how they’re really used, not just what they mean.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="how">
+  <section id="how" class="band sand">
     <div class="wrap">
+      <span class="eyebrow">Step one</span>
       <h2>Tap a word. Keep it.</h2>
       <div class="sample" aria-label="An example subtitle">
-        <div class="words" dir="rtl"><span class="w"><span class="ar known" lang="ar">الْحَمْدُ</span><i>al-ḥamdu</i></span><span class="w"><span class="ar known" lang="ar">لِلّٰهِ</span><i>lillāh</i></span><span class="w"><span class="ar learning spoken" lang="ar">بِخَيْرٍ،</span><i>bikhayrin</i></span><span class="w"><span class="ar" lang="ar">وَكَيْفَ</span><i>wakayfa</i></span><span class="w"><span class="ar learning" lang="ar">حَالُكَ</span><i>ḥāluka</i></span><span class="w"><span class="ar known" lang="ar">أَنْتَ؟</span><i>anta</i></span></div>
+        <div class="words" dir="rtl"><button type="button" class="w" data-gloss="praise"><span class="ar known" lang="ar">الْحَمْدُ</span><i>al-ḥamdu</i></button><button type="button" class="w" data-gloss="to God"><span class="ar known" lang="ar">لِلّٰهِ</span><i>lillāh</i></button><button type="button" class="w" data-gloss="well"><span class="ar learning spoken" lang="ar">بِخَيْرٍ،</span><i>bikhayrin</i></button><button type="button" class="w" data-gloss="and how"><span class="ar" lang="ar">وَكَيْفَ</span><i>wakayfa</i></button><button type="button" class="w" data-gloss="your state"><span class="ar learning" lang="ar">حَالُكَ</span><i>ḥāluka</i></button><button type="button" class="w" data-gloss="you"><span class="ar known" lang="ar">أَنْتَ؟</span><i>anta</i></button></div>
         <p class="en">Fine, thank God. And how are you?</p>
+        <div class="gloss" aria-live="polite">Tap any word above</div>
       </div>
       <p class="caption">Words you know turn <span class="known">teal</span>, words you’re learning <span class="learning">orange</span>.</p>
     </div>
@@ -56,7 +71,9 @@
 
   <section id="review">
     <div class="wrap">
+      <span class="eyebrow">Step two</span>
       <h2>Review your saved words</h2>
+      <div class="deck">
       <div class="flash" role="button" tabindex="0" aria-expanded="false" aria-label="A review card. Tap to see the answer">
         <div class="front">
           <span class="ar" lang="ar">قَمَر</span>
@@ -71,26 +88,29 @@
           <div class="grades"><button type="button" class="g1">Again<small>1m</small></button><button type="button" class="g2">Hard<small>6m</small></button><button type="button" class="g3">Good<small>10m</small></button><button type="button" class="g4">Easy<small>9d</small></button></div>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
-  <section>
+  <section class="band">
     <div class="wrap">
+      <span class="eyebrow">Your pick</span>
       <h2>Choose your Arabic</h2>
       <div class="dialects">
-        <div class="dialect"><span class="ar" lang="ar">شَامِي</span><h3>Levantine</h3></div>
-        <div class="dialect"><span class="ar" lang="ar">مَصْرِي</span><h3>Egyptian</h3></div>
-        <div class="dialect"><span class="ar" lang="ar">فُصْحَى</span><h3>Fuṣḥā</h3></div>
+        <div class="dialect d1"><span class="ar" lang="ar">مَصْرِي</span><h3>Egyptian</h3></div>
+        <div class="dialect d2"><span class="ar" lang="ar">شَامِي</span><h3>Levantine</h3></div>
+        <div class="dialect d3"><span class="ar" lang="ar">فُصْحَى</span><h3>Fuṣḥā</h3></div>
       </div>
       <p class="fine">Videos play free in YouTube’s own player.</p>
     </div>
   </section>
 </main>
 
-<footer>
+<footer class="dark">
   <div class="wrap">
-    <span>© 2026 Isma</span>
+    <img class="foot-mark" src="assets/isma-wordmark-cream.svg" alt="Isma">
     <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="videos.html">Video sources</a><a href="copyright.html">Copyright</a><a href="mailto:rawaz@theisma.app">Contact</a></nav>
+    <span class="copy">© 2026 Isma</span>
   </div>
 </footer>
 <script>
@@ -99,6 +119,14 @@ var card = document.querySelector(".flash");
 function flip(open) { card.classList.toggle("open", open); card.setAttribute("aria-expanded", open); }
 card.addEventListener("click", function (e) { flip(!e.target.closest("button")); });
 card.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); flip(!card.classList.contains("open")); } });
+// The subtitle: tap a word to see its meaning, as in the app.
+var gloss = document.querySelector(".gloss");
+document.querySelectorAll(".words .w").forEach(function (w) {
+  w.addEventListener("click", function () {
+    document.querySelectorAll(".words .w").forEach(function (x) { x.classList.toggle("picked", x === w); });
+    gloss.innerHTML = "<span class=\"ar\" lang=\"ar\">" + w.querySelector(".ar").textContent + "</span> " + w.dataset.gloss;
+  });
+});
 </script>
 </body>
 </html>
