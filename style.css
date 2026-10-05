@@ -98,14 +98,14 @@ h2 { font-size: clamp(28px, 4vw, 38px); letter-spacing: -0.02em; line-height: 1.
 .fine { color: var(--muted); font-size: 14px; margin-top: 16px; }
 
 /* review card */
-.flash { max-width: 440px; margin: 0 auto; background: var(--surface); border-radius: var(--radius); padding: 28px 24px; text-align: center; cursor: pointer; box-shadow: 0 1px 2px rgba(30,26,22,.06), 0 8px 24px rgba(30,26,22,.08); user-select: none; }
+.flash { max-width: 340px; min-height: 500px; display: flex; flex-direction: column; justify-content: center; margin: 0 auto; background: var(--surface); border-radius: var(--radius); padding: 28px 24px; text-align: center; cursor: pointer; box-shadow: 0 1px 2px rgba(30,26,22,.06), 0 8px 24px rgba(30,26,22,.08); user-select: none; }
 .flash:focus-visible { outline: 3px solid var(--accent-edge); outline-offset: 3px; }
 .flash .front, .flash .back { display: flex; flex-direction: column; align-items: center; }
 .flash .back, .flash.open .front { display: none; }
 .flash.open .back { display: flex; animation: reveal .25s ease-out; }
 @keyframes reveal { from { opacity: 0; transform: translateY(6px); } }
 .flash .front .ar, .flash .back > .ar { font-size: 64px; font-weight: 700; line-height: 1.5; }
-.flash .front { min-height: 220px; justify-content: center; }
+.flash .front { justify-content: center; }
 .hint { color: var(--muted); font-size: 15px; }
 .flash i { color: var(--muted); font-size: 18px; }
 .flash strong { font-size: 28px; font-weight: 800; margin-top: 2px; }
