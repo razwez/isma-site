@@ -152,3 +152,4 @@ th { font-weight: 800; }
   .cards, .dialects, .plans { grid-template-columns: 1fr; }
   .top nav { gap: 14px; }
 }
+.nowrap { white-space: nowrap; }
