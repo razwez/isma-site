@@ -33,6 +33,7 @@ img { max-width: 100%; height: auto; display: block; }
 .top { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 20px; }
 .logo img { width: 36px; height: 36px; border-radius: 9px; }
+.logo img.wordmark { width: auto; height: 40px; border-radius: 0; }
 .logo .ar { font-size: 24px; font-weight: 700; line-height: 1; }
 .top nav { display: flex; gap: 20px; font-weight: 600; font-size: 15px; }
 .top nav a { text-decoration: none; color: var(--muted); }
