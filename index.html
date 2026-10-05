@@ -13,12 +13,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@500;700&display=swap">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <header class="wrap top">
   <a class="logo" href="./"><img class="wordmark" src="assets/isma-wordmark.svg" alt="Isma"></a>
-  <nav><a href="#how">How it works</a><a href="#pricing">Pricing</a></nav>
+  <nav><a href="#how">How it works</a><a href="#why">Why it works</a></nav>
 </header>
 
 <main>
@@ -43,6 +43,37 @@
     </div>
   </section>
 
+  <section id="review">
+    <div class="wrap">
+      <h2>It comes back before you forget</h2>
+      <div class="flash" role="button" tabindex="0" aria-expanded="false" aria-label="A review card. Tap to see the answer">
+        <div class="front">
+          <span class="ar" lang="ar">قَمَر</span>
+          <span class="hint">Tap to see the answer</span>
+        </div>
+        <div class="back">
+          <span class="ar" lang="ar">قَمَر</span>
+          <i>qamar</i>
+          <strong>moon</strong>
+          <span class="pos">Noun · root <span class="ar" lang="ar">ق م ر</span></span>
+          <div class="said"><span class="ar" lang="ar" dir="rtl">إِنْتِي <mark>قَمَر</mark>!</span><span>You’re gorgeous! <em>(literally “you’re a moon”)</em></span></div>
+          <div class="grades"><button type="button" class="g1">Again<small>1m</small></button><button type="button" class="g2">Hard<small>6m</small></button><button type="button" class="g3">Good<small>10m</small></button><button type="button" class="g4">Easy<small>9d</small></button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <h2>Why it works</h2>
+      <div class="cards">
+        <div class="card"><h3>Immersion</h3><p>You learnt your first language by hearing it, not studying it. Isma gives you lots of real Arabic in clips short enough to follow, so your ear does the work.</p></div>
+        <div class="card"><h3>Spaced repetition</h3><p>Each word you save comes back just before you’d forget it. Every review pushes the next one further away, so a few minutes a day keeps hundreds of words.</p></div>
+        <div class="card"><h3>Together</h3><p>Words come back in the sentence and voice you first heard them in, so you remember how they’re really used, not just what they mean.</p></div>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="wrap">
       <h2>The Arabic people actually speak</h2>
@@ -51,17 +82,7 @@
         <div class="dialect"><span class="ar" lang="ar">مَصْرِي</span><h3>Egyptian</h3></div>
         <div class="dialect"><span class="ar" lang="ar">فُصْحَى</span><h3>Fuṣḥā</h3></div>
       </div>
-    </div>
-  </section>
-
-  <section id="pricing">
-    <div class="wrap">
-      <h2>Simple pricing</h2>
-      <div class="plans">
-        <div class="plan best"><span class="badge">Popular</span><h3>Yearly</h3><div class="price">£37.00 <small>a year</small></div><p>7 days free · £3.08 a month · save 56%</p></div>
-        <div class="plan"><h3>Monthly</h3><div class="price">£6.99 <small>a month</small></div></div>
-      </div>
-      <p class="fine">You pay for the learning tools. The videos stay free on YouTube, in YouTube’s own player. Cancel any time in your store settings.</p>
+      <p class="fine">Videos play free in YouTube’s own player.</p>
     </div>
   </section>
 </main>
@@ -72,5 +93,12 @@
     <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="videos.html">Video sources</a><a href="copyright.html">Copyright</a><a href="mailto:rawaz@theisma.app">Contact</a></nav>
   </div>
 </footer>
+<script>
+// The review card: tap to turn it over, grade to turn it back.
+var card = document.querySelector(".flash");
+function flip(open) { card.classList.toggle("open", open); card.setAttribute("aria-expanded", open); }
+card.addEventListener("click", function (e) { flip(!e.target.closest("button")); });
+card.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); flip(!card.classList.contains("open")); } });
+</script>
 </body>
 </html>

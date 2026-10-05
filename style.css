@@ -98,6 +98,33 @@ h2 { font-size: clamp(28px, 4vw, 38px); letter-spacing: -0.02em; line-height: 1.
 .plan p { margin: 6px 0 0; color: var(--known); font-weight: 700; font-size: 15px; }
 .fine { color: var(--muted); font-size: 14px; margin-top: 16px; }
 
+/* review card */
+.flash { max-width: 440px; margin: 0 auto; background: var(--surface); border-radius: var(--radius); padding: 28px 24px; text-align: center; cursor: pointer; box-shadow: 0 1px 2px rgba(30,26,22,.06), 0 8px 24px rgba(30,26,22,.08); user-select: none; }
+.flash:focus-visible { outline: 3px solid var(--accent-edge); outline-offset: 3px; }
+.flash .front, .flash .back { display: flex; flex-direction: column; align-items: center; }
+.flash .back, .flash.open .front { display: none; }
+.flash.open .back { display: flex; animation: reveal .25s ease-out; }
+@keyframes reveal { from { opacity: 0; transform: translateY(6px); } }
+.flash .front .ar, .flash .back > .ar { font-size: 64px; font-weight: 700; line-height: 1.5; }
+.flash .front { min-height: 220px; justify-content: center; }
+.hint { color: var(--muted); font-size: 15px; }
+.flash i { color: var(--muted); font-size: 18px; }
+.flash strong { font-size: 28px; font-weight: 800; margin-top: 2px; }
+.pos { color: var(--muted); font-size: 15px; }
+.pos .ar { font-size: 17px; color: var(--ink); }
+.said { display: flex; flex-direction: column; gap: 2px; margin: 18px 0 20px; padding-top: 16px; border-top: 1px solid var(--line); width: 100%; }
+.said .ar { font-size: 26px; line-height: 1.7; }
+.said mark { background: rgba(255,194,51,.45); border-radius: 8px; padding: 0 4px; color: inherit; }
+.said em { color: var(--muted); }
+.grades { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; }
+.grades button { height: 56px; border: 0; border-radius: 14px; font: 800 16px "Figtree", sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; }
+.grades small { font-size: 12px; font-weight: 700; }
+.g1 { color: #b42318; background: #fde2de; box-shadow: 0 3px 0 #f4b8ae; }
+.g2 { color: #8a5300; background: var(--sand); box-shadow: 0 3px 0 #f3d59a; }
+.g3 { color: var(--known); background: var(--known-tint); box-shadow: 0 3px 0 #b3e0d4; }
+.g4 { color: #1d4ed8; background: #e1ecfb; box-shadow: 0 3px 0 #bcd2f5; }
+.card h3 { margin-top: 0; }
+
 /* footer */
 footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
