@@ -19,7 +19,7 @@
 
 <main class="wrap legal">
   <h1>Privacy policy</h1>
-  <p class="updated">Last updated 12 October 2026</p>
+  <p class="updated">Last updated 18 October 2026</p>
 
   <div class="box"><p><strong>In short:</strong> Isma has no accounts, no ads and no tracking. Your learning progress lives on your phone, with a backup tied to a random ID rather than to your name or email. Payments are handled by Apple or Google. We never sell your data.</p></div>
 
@@ -31,12 +31,14 @@
     <tr><th>What</th><th>Why</th><th>Where it’s kept</th></tr>
     <tr><td><strong>Your learning progress</strong>: the words you save and how your reviews went, which clips you’ve watched, your daily activity, your settings, and your onboarding answers (which Arabic you’re learning, how much you know, minutes a day).</td><td>To run the app, and to restore your progress if you reinstall.</td><td>On your phone, and backed up to our database (Supabase, servers in London, UK).</td></tr>
     <tr><td><strong>Why you’re learning Arabic</strong> (an onboarding answer such as “Travel” or “Faith”).</td><td>To shape your experience.</td><td>On your phone only. It is never sent to our servers.</td></tr>
-    <tr><td><strong>A random backup ID</strong>, created when you first open the app. It isn’t linked to your name, email or phone number.</td><td>To know which backup is yours.</td><td>Our database, and securely on your phone.</td></tr>
+    <tr><td><strong>Your account</strong>: a random account ID, created when you first open the app, and how you sign in: your Apple or Google sign-in (Apple may give us a private relay address instead of your real one), or the email address you give us for a sign-in code.</td><td>To keep your words, streak and subscription safe and bring them back on a new phone, and to send the sign-in codes you ask for.</td><td>Our database (Supabase, London, UK), and securely on your phone. Sign-in codes are emailed through Resend.</td></tr>
     <tr><td><strong>Subscription details</strong>: which plan you have, trial and renewal dates, and an anonymous customer ID.</td><td>To give subscribers access and let you restore a purchase.</td><td>Apple or Google, and RevenueCat, which manages subscriptions for us.</td></tr>
     <tr><td><strong>The feedback board</strong>, if you use it: the first name you choose to show, the ideas and comments you post, your votes, anything you report or block, and a push token so we can tell you about ideas you follow.</td><td>To run the board: show your posts with your first name, count votes, keep the board safe, and send the notifications you allow.</td><td>Our database (Supabase, London, UK). Notifications go through Expo’s push service and Apple or Google.</td></tr>
+    <tr><td><strong>How the app is used</strong>: events such as finishing onboarding, starting a trial, watching a clip, saving or reviewing a word, with your account ID, device type, app version and country. No screen recording, nothing you type, and not your email.</td><td>To understand which parts of Isma help people learn, and fix what doesn’t.</td><td>PostHog, our analytics provider (servers in the EU).</td></tr>
+    <tr><td><strong>Home and lock screen widgets</strong>, if you add them: your streak, your saved words and their recordings.</td><td>To show them on your widgets.</td><td>On your phone only.</td></tr>
     <tr><td><strong>Technical data</strong>: your IP address, device type, operating system and app version, sent automatically when the app talks to a server.</td><td>To deliver content and app updates, and to keep the service secure.</td><td>Logs kept by our providers for short periods.</td></tr>
   </table>
-  <p>Apart from a first name you choose to show on the feedback board, we don’t collect your name, email address, contacts, location, photos or microphone audio. We don’t run ads, use advertising IDs or track you across other apps and websites. Pronunciation is spoken by your phone’s own text-to-speech, on the device.</p>
+  <p>Apart from how you sign in and a first name you choose to show on the feedback board, we don’t collect your name, contacts, location, photos or microphone audio. We don’t run ads, use advertising IDs or track you across other apps and websites. Pronunciation is spoken by your phone’s own text-to-speech, on the device.</p>
 
   <h2>Videos from YouTube</h2>
   <p>Clips play in YouTube’s official embedded player. When a clip plays, YouTube (Google) receives information such as your IP address and device details, and may use cookies or similar technology, as described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. YouTube’s <a href="https://www.youtube.com/t/terms">Terms of Service</a> apply to the videos themselves.</p>
@@ -44,19 +46,21 @@
   <h2>Who we share it with</h2>
   <p>Only the providers who run the service for us, each bound to use the data only for that:</p>
   <ul>
-    <li><strong>Supabase</strong>: our database and the anonymous sign-in behind your backup (London, UK).</li>
+    <li><strong>Supabase</strong>: our database and your account (London, UK).</li>
+    <li><strong>Resend</strong>: sends sign-in code emails (servers in the EU).</li>
+    <li><strong>PostHog</strong>: app analytics (servers in the EU).</li>
     <li><strong>RevenueCat</strong>: subscription management (United States).</li>
-    <li><strong>Apple</strong> and <strong>Google</strong>: payments, and the app stores you download Isma from.</li>
+    <li><strong>Apple</strong> and <strong>Google</strong>: sign-in, payments, and the app stores you download Isma from.</li>
     <li><strong>Expo</strong> (650 Industries): delivers app updates and feedback-board notifications (United States).</li>
     <li><strong>YouTube</strong> (Google): plays the video clips.</li>
   </ul>
   <p>Where data goes outside the UK, it is protected by the safeguards UK law requires, such as the UK’s adequacy regulations or standard contractual clauses. We never sell your data. We would only disclose it if the law required us to.</p>
 
   <h2>Our legal basis</h2>
-  <p>Under UK and EU data protection law, we use your data to provide the app you asked for and the subscription you bought (performance of a contract), and to keep backups working and the service secure (our legitimate interests).</p>
+  <p>Under UK and EU data protection law, we use your data to provide the app you asked for and the subscription you bought (performance of a contract), and to keep backups working, understand how the app is used and keep the service secure (our legitimate interests).</p>
 
   <h2>How long we keep it</h2>
-  <p>Your progress stays on your phone until you delete the app or choose <em>Reset progress</em>. The backup is kept while you use Isma and deleted when you ask us. Your feedback-board posts stay on the board until you or we remove them; ask us and we’ll delete them. Subscription records are kept as long as the law requires for tax and accounting. Provider logs are kept for short periods, typically days to weeks.</p>
+  <p>Your progress stays on your phone until you delete the app or choose <em>Reset progress</em>. Your account and backup are kept while you use Isma. Delete them yourself any time in Settings, under <em>Delete account</em>, or ask us. Analytics events are kept for up to a year. Your feedback-board posts stay on the board until you or we remove them; ask us and we’ll delete them. Subscription records are kept as long as the law requires for tax and accounting. Provider logs are kept for short periods, typically days to weeks.</p>
 
   <h2>Your rights</h2>
   <p>You can ask us for a copy of your data, to correct it, to delete it, to restrict or object to how we use it, or to move it elsewhere. You can also export your saved words from the app’s Words tab at any time. Because Isma has no accounts, we can’t look your backup up by name or email. The quickest way to erase it is <em>Reset progress</em> in the Words tab, which replaces your backup with an empty one straight away. For anything else, write to <a href="mailto:rawaz@theisma.app">rawaz@theisma.app</a> and we’ll work out together which backup is yours. If you’re unhappy with how we handle your data, you can complain to the Information Commissioner’s Office (<a href="https://ico.org.uk">ico.org.uk</a>) or your local authority.</p>

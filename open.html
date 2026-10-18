@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Isma</title>
+<meta name="robots" content="noindex">
+<!-- The emails' buttons (supabase/functions/trial-reminder, 18 Oct 2026): email apps drop isma:// links, so
+     they come here, which opens the app (?to=feed for the Watch tab) and offers the stores when it isn't installed. -->
+<link rel="stylesheet" href="style.css">
+<style>
+  .open { max-width: 420px; margin: 15vh auto 0; padding: 0 16px; text-align: center; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .open a.button { display: block; margin: 24px 0 12px; padding: 16px; border-radius: 28px; background: #FFC233; color: #1E1A16; font-weight: 800; text-decoration: none; }
+  .open p { color: #6B6158; }
+</style>
+</head>
+<body>
+  <div class="open">
+    <img src="assets/fanak-email.png" alt="" width="100">
+    <h1>Opening Isma…</h1>
+    <a class="button" id="open" href="isma://">Open Isma</a>
+    <p>Don’t have it yet? <a href="https://apps.apple.com/app/id6822783362">App Store</a> · <a href="https://play.google.com/store/apps/details?id=app.theisma.isma">Google Play</a></p>
+  </div>
+  <script>
+    var to = new URLSearchParams(location.search).get("to");
+    var link = to === "feed" ? "isma://feed" : "isma://";
+    document.getElementById("open").href = link;
+    location.href = link;
+  </script>
+</body>
+</html>
