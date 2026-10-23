@@ -90,3 +90,26 @@ footer.dark a:hover { color: var(--accent); }
   .s1 { left: -22%; } .s2 { right: -24%; } .s3 { left: -26%; }
   .home .dialect { min-height: 110px; }
 }
+
+/* store badges and the waitlist popup they open before launch */
+.stores { flex-wrap: wrap; }
+.store-badge { display: block; transition: transform .15s; }
+.store-badge:hover { transform: translateY(-2px); }
+.store-badge img { height: 52px; width: auto; }
+#waitlist { width: min(420px, calc(100vw - 32px)); border: 0; border-radius: var(--radius); padding: 28px 24px 24px; background: var(--surface); color: var(--ink); text-align: center; box-shadow: 0 20px 60px rgba(30,26,22,.25); }
+#waitlist::backdrop { background: rgba(30,26,22,.55); }
+#waitlist h2 { font-size: 26px; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 8px; }
+#waitlist p { margin: 0; color: var(--muted); font-size: 16px; }
+.wl-fanak { width: 96px; margin: 0 auto 8px; }
+.wl-x { position: absolute; top: 8px; right: 8px; width: 44px; height: 44px; border: 0; background: none; font-size: 28px; line-height: 1; color: var(--muted); cursor: pointer; border-radius: 12px; }
+.wl-x:hover { background: var(--sand); color: var(--ink); }
+#waitlist form { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+#waitlist input { height: 56px; border: 2px solid var(--line); border-radius: 16px; padding: 0 16px; font: 400 17px "Figtree", sans-serif; color: var(--ink); background: var(--bg); }
+#waitlist input:focus { outline: none; border-color: var(--accent-edge); }
+#waitlist .button { border: 0; cursor: pointer; font-family: "Figtree", sans-serif; width: 100%; }
+#waitlist .button:disabled { opacity: .6; cursor: default; }
+#waitlist .wl-error { color: var(--learning); font-size: 15px; min-height: 1.4em; }
+#waitlist .wl-thanks { display: none; }
+#waitlist .wl-thanks .button { margin-top: 20px; }
+#waitlist.done .wl-ask { display: none; }
+#waitlist.done .wl-thanks { display: block; }

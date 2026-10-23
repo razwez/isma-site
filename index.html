@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@500;700&display=swap">
 <link rel="stylesheet" href="style.css?v=9">
-<link rel="stylesheet" href="home.css?v=1">
+<link rel="stylesheet" href="home.css?v=2">
 </head>
 <body class="home">
 <div class="hero-band">
@@ -28,7 +28,10 @@
     <span class="kicker">Egyptian · Levantine · Fuṣḥā</span>
     <h1>Doomscrolling, but you <span class="nowrap"><span class="mark">learn Arabic.</span></span></h1>
     <p>Real Arabic videos. Tap any word to understand it.</p>
-    <div class="stores"><span class="store">App Store</span><span class="store">Google Play</span></div>
+    <div class="stores">
+      <a class="store-badge" data-store="ios" href="#"><img src="assets/app-store-badge.svg" alt="Download on the App Store"></a>
+      <a class="store-badge" data-store="android" href="#"><img src="assets/google-play-badge.png" alt="Get it on Google Play"></a>
+    </div>
     <span class="soon">Coming soon</span>
   </div>
   <div class="art">
@@ -113,6 +116,25 @@
     <script>document.querySelectorAll(".year").forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>
   </div>
 </footer>
+<dialog id="waitlist" aria-labelledby="wl-title">
+  <button type="button" class="wl-close wl-x" aria-label="Close">×</button>
+  <img class="wl-fanak" src="assets/fanak.png" alt="">
+  <div class="wl-ask">
+    <h2 id="wl-title">Coming soon on iPhone</h2>
+    <p class="wl-text"></p>
+    <form novalidate>
+      <input type="email" name="email" placeholder="you@example.com" autocomplete="email" aria-label="Email address" required>
+      <button type="submit" class="button">Join the waitlist</button>
+      <p class="wl-error" aria-live="polite"></p>
+    </form>
+  </div>
+  <div class="wl-thanks" aria-live="polite">
+    <h2>Thank you!</h2>
+    <p class="wl-thanks-text"></p>
+    <button type="button" class="button wl-close">Done</button>
+  </div>
+</dialog>
+<script src="waitlist.js?v=1"></script>
 <script>
 // The review card: tap to turn it over, grade to turn it back.
 var card = document.querySelector(".flash");
