@@ -2,30 +2,30 @@
 // adds the visitor's email to the waitlist (public.waitlist in Supabase).
 // Launch day: set that store's `live` to true and its badge goes straight to
 // the store.
-var STORES = {
+const STORES = {
   ios: { live: false, url: "https://apps.apple.com/app/id6822783362" },
   android: { live: false, url: "https://play.google.com/store/apps/details?id=app.theisma.isma" }
 };
 
 // Public by design, as in the app's .env: row-level security lets this key
 // add a signup and nothing else.
-var SUPABASE_URL = "https://oyrdxzgwwkzplpueapwl.supabase.co";
-var SUPABASE_KEY = "sb_publishable_ZRVYnyQ1FWEbcloMzTz5mQ_t7qE76yN";
+const SUPABASE_URL = "https://oyrdxzgwwkzplpueapwl.supabase.co";
+const SUPABASE_KEY = "sb_publishable_ZRVYnyQ1FWEbcloMzTz5mQ_t7qE76yN";
 
-var COPY = {
+const COPY = {
   ios: { title: "Coming soon on iPhone", text: "Isma isn’t on the App Store yet. Join the waitlist to be the first to know when it launches." },
   android: { title: "Coming soon on Android", text: "Isma isn’t available on Android yet. Join the waitlist to be the first to know when it launches." }
 };
 
-var dialog = document.getElementById("waitlist");
-var form = dialog.querySelector("form");
-var email = form.querySelector("input");
-var submit = form.querySelector("button[type=submit]");
-var error = dialog.querySelector(".wl-error");
-var platform = "ios";
+const dialog = document.getElementById("waitlist");
+const form = dialog.querySelector("form");
+const email = form.querySelector("input");
+const submit = form.querySelector("button[type=submit]");
+const error = dialog.querySelector(".wl-error");
+let platform = "ios";
 
 document.querySelectorAll("[data-store]").forEach(function (badge) {
-  var store = STORES[badge.dataset.store];
+  const store = STORES[badge.dataset.store];
   if (store.live) { badge.href = store.url; return; }
   badge.addEventListener("click", function (e) {
     e.preventDefault();
@@ -53,7 +53,7 @@ dialog.addEventListener("click", function (e) { if (e.target === dialog) dialog.
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  var address = email.value.trim().toLowerCase();
+  const address = email.value.trim().toLowerCase();
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(address)) { error.textContent = "Enter an email address like name@example.com."; return; }
   error.textContent = "";
   submit.disabled = true;
